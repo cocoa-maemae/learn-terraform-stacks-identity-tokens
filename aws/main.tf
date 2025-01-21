@@ -37,7 +37,7 @@ data "aws_iam_policy_document" "stacks_role_policy" {
     condition {
       test     = "StringLike"
       variable = "app.terraform.io:sub"
-      values   = ["organization:${var.tfc_organization}:project:*:stack:*:*"]
+      values   = ["organization:${var.tfc_organization}:project:*:stack:*:*"] # change the permission compared to the original source
     }
   }
 }
